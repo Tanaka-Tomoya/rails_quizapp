@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Hello from './hello_react'
-import Test from '../components/test'
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
 import RaisedButton from 'material-ui/RaisedButton';
+import Home from '../home/home'
+import Create from '../create/create'
 
 export default class Menu extends Component {
 	render() {
@@ -12,14 +12,15 @@ export default class Menu extends Component {
 					<a href="/">
 						<RaisedButton label="HOME" primary={true}/>
 					</a>
-					<a href="/test">
+					<a href="/create">
 						<RaisedButton label="CREATE" primary={true}/>
 					</a>
 
-					<Switch>
-						<Route exact path='/' component={Hello} />
-						<Route exact path='/test' component={Test} />
-					</Switch>
+				<Switch>
+					  	<Route exact path='/' component={Home} />
+					  	<Route exact path='/create' component={Create} />
+					  </Switch>
+
 				</div>
 			</BrowserRouter>
 		)

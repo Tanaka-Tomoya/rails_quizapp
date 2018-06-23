@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Menu from '../components/menu'
+import Menu from '../components/general/menu'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {
 	BrowserRouter,
